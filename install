@@ -1,0 +1,10 @@
+#!/bin/bash -ex
+mkdir -p ~/.gdb/stlPrettyPrinter
+cp -rf gcc.gnu.org/svn/gcc/trunk/libstdc++-v3/python/* ~/.gdb/stlPrettyPrinter/
+cat >>~/.gdbinit <<_EOC
+python
+import sys
+import os
+sys.path.insert(0, os.path.expanduser('~/.gdb/stlPrettyPrinter'))
+end
+_EOC

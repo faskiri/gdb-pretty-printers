@@ -1,0 +1,1 @@
+wget -e robots=off  -np --no-check-certificate -r  https://gcc.gnu.org/svn/gcc/trunk/libstdc++-v3/python/
